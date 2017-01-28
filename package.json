@@ -1,0 +1,28 @@
+{
+  "name": "spotify-search",
+  "version": "1.0.0",
+  "description": "get-spotify-items",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakubStompor/spotify-search.git"
+  },
+  "keywords": [
+    "spotify"
+  ],
+  "author": "Jakub Stompor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JakubStompor/spotify-search/issues"
+  },
+  "homepage": "https://github.com/JakubStompor/spotify-search#readme",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "webpack": "^1.14.0"
+  }
+}
