@@ -6,7 +6,9 @@
       <li ng-repeat="genre in artist.genres">{{genre}}</li>
     </ul>
     <ul>
-      <li ng-repeat="song in artist.songs"><img tooltip="{{song.name}}" ng-src="{{song.image}}" /></li>
+      <li ng-repeat="song in artist.songs"><img ng-click="ctrl.play(song.preview)" tooltip="{{song.name}}" ng-src="{{song.image}}" />
+        <p>{{song.duration}}</p>
+      </li>
     </ul>
   </li>
 </ul>

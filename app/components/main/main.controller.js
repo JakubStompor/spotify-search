@@ -5,10 +5,16 @@ module.exports = function(spotifyService, $state, $stateParams, $timeout) {
   }, 0);
 
   self.search = function() {
+    spotifyService.pause();
     if (self.artists) {
       $state.go('list', {
         name: self.artists
       });
+    }
+  };
+  self.keypress = function(e) {
+    if (e.which == 13) {
+      this.search();
     }
   }
 }
