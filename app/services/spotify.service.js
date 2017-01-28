@@ -6,7 +6,20 @@ module.exports = function ($http, $q) {
   }
 
   this.getArtists = function(query) {
-      return $http.get('https://api.spotify.com/v1/search?q=' + encodeURIComponent(query) + '&type=artist').then(getData);
+      return $http.get('https://api.spotify.com/v1/search?q=' + encodeURIComponent(query) + '&type=artist').then(function(response) {
+         return response.data.artists.items.map(function(artist) {
+             return {
+               id: artist.id,
+               name: artist.name,
+               image: artist.images.filter(function(img) {
+                 return img.width <= 300;
+               }).map(function(img) {
+                 return img.url;
+               })[0],
+               genres: artist.genres
+             }
+        });
+      });
   };
   this.getTopTracks = function(id) {
       var defer = $q.defer(); // dostajemy promise (nakladka na promise)

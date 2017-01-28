@@ -1,7 +1,23 @@
-.artist ul img {
+li.artist {
+  border-bottom: 1px solid #000;
+  margin: 5%;
+}
+.artist img.artist-image {
   width:200px;
-  display: inline;
+  display: block;
+  margin:auto;
   -webkit-border-radius: 50%;
   -moz-border-radius:50%;
   border-radius:50%;
+}
+.artist span.artist-name {
+  font-weight:bold;
+  font-size:2em;
+  text-align: center;
+  display: block;
+  text-decoration:underline;
+}
+.artist li {
+  display:inline-block;
+  padding:10px;
 }

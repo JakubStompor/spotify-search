@@ -1,9 +1,12 @@
 <ul class="list-unstyled">
-
   <li class="artist" ng-repeat="artist in ctrl.artists">
-    <div class="row name">{{artist.name}}</div>
-    <ul >
-      <li ng-repeat="song in artist.songs"><img ng-src="{{song.image}}" /><span>{{song.name}}</span></li>
+    <img class="artist-image" ng-src="{{artist.image}}" />
+    <span class="artist-name">{{artist.name}}</span>
+    <ul class="genres">
+      <li ng-repeat="genre in artist.genres">{{genre}}</li>
+    </ul>
+    <ul>
+      <li ng-repeat="song in artist.songs"><img tooltip="{{song.name}}" ng-src="{{song.image}}" /></li>
     </ul>
   </li>
 </ul>
