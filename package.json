@@ -21,9 +21,14 @@
   "homepage": "https://github.com/JakubStompor/spotify-search#readme",
   "dependencies": {
     "angular": "^1.6.1",
+    "angular-ui-router": "^0.4.2",
     "bootstrap": "^3.3.7",
+    "css-loader": "^0.26.1",
+    "expose-loader": "^0.7.1",
+    "file-loader": "^0.10.0",
     "html-loader": "^0.4.4",
     "jquery": "^3.1.1",
+    "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
   }
 }
