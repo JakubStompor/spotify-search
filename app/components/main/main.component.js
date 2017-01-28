@@ -1,4 +1,5 @@
 // nowy moduł node.js z komponentem
+require('./main.css');
 
 module.exports = {
   // pobranie pliku html jako template

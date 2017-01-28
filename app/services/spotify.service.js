@@ -13,25 +13,7 @@ module.exports = function ($http, $q, $timeout) {
       this.sound.pause();
     }
   };
-  /*
-  this.duration = function(url) {
-    var defer = $q.defer();
-    try {
-      var sound = new Audio(url);
-      sound.volume = 0;
-      sound.play();
-      $timeout(function () {
-        var duration = sound.duration;
-        sound.pause();
-        defer.resolve(duration);
-      }, 200);
 
-    } catch (e) {
-      defer.resolve();
-    }
-    return defer.promise;
-  };
-  */
   this.getArtists = function(query) {
       return $http.get('https://api.spotify.com/v1/search?q=' + encodeURIComponent(query) + '&type=artist').then(function(response) {
          return response.data.artists.items.map(function(artist) {
@@ -53,7 +35,7 @@ module.exports = function ($http, $q, $timeout) {
       var defer = $q.defer(); // dostajemy promise (nakladka na promise)
       $http.get('https://api.spotify.com/v1/artists/' + id + '/top-tracks?country=SE').then(function(response) {
         var promises = response.data.tracks.slice(0,4).map(function(track) {
-          var preview = track.preview_url;
+            var preview = track.preview_url;
             return $http.get(track.album.href).then(function(response) {
                 return {
                   name: response.data.name,

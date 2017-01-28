@@ -1,6 +1,18 @@
 <div class="container">
-    <label for="searchArtists">Wyszukaj artystę:</label>
-    <input id="searchArtists" type="text" class="form-control" ng-model="ctrl.artists" ng-keypress="ctrl.keypress($event)"/>
-    <button class="btn btn-default" ng-click="ctrl.search()">Szukaj</button>
-  <div ui-view></div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 header">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2">
+        <label for="searchArtists">Wyszukaj artystę:</label>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-8">
+        <input id="searchArtists" type="text" class="form-control" ng-model="ctrl.artists" ng-keypress="ctrl.keypress($event)"/>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2">
+        <button class="btn btn-primary" ng-click="ctrl.search()">Szukaj</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div ui-view></div>
+  </div>
 </div>

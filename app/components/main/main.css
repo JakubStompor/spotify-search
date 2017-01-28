@@ -1,0 +1,21 @@
+html,body,.container {
+    height:100%;
+}
+.container {
+  width:100%;
+  box-sizing: border-box;
+}
+.header {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 1% 0%;
+}
+.header > div {
+  padding: 5px 15px;
+}
+.btn-primary {
+  width:100%;
+}

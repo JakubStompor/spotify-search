@@ -1,14 +1,18 @@
-<ul class="list-unstyled">
-  <li class="artist" ng-repeat="artist in ctrl.artists">
-    <img class="artist-image" ng-src="{{artist.image}}" />
-    <span class="artist-name">{{artist.name}}</span>
-    <ul class="genres">
-      <li ng-repeat="genre in artist.genres">{{genre}}</li>
-    </ul>
-    <ul>
-      <li ng-repeat="song in artist.songs"><img ng-click="ctrl.play(song.preview)" tooltip="{{song.name}}" ng-src="{{song.image}}" />
-        <p>{{song.duration}}</p>
-      </li>
-    </ul>
-  </li>
-</ul>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 artists" ng-repeat="artist in ctrl.artists">
+    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
+      <img class="artist-image" ng-src="{{artist.image}}" />
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-10">
+      <span class="artist-name">{{artist.name}}</span>
+      <ul class="genres">
+        <li ng-repeat="genre in artist.genres">{{genre}}</li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 albums">
+      <div class="album-covers" ng-repeat="song in artist.songs">
+        <img class="album-image" ng-click="ctrl.play(song.preview)" tooltip="{{song.name}}" ng-src="{{song.image}}" />
+      </div>
+    </div>
+  </div>
+</div>
