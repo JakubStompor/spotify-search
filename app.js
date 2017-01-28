@@ -17,8 +17,11 @@ var app = angular.module('spotify-search', [components.name, uiRouter, services.
     template: '<song></song>'
   }).state({
     name:'list',
-    url: '/',
+    url: '/artist/:name',
     template: '<list></list>'
-  });
+  }).state({
+    name: 'index',
+    url: '/'
+  })
   $urlRouterProvider.otherwise('/');
 })

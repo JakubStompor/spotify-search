@@ -1,9 +1,6 @@
-<div>
-  <nav>
-    <ul>
-      <li><a ui-sref="song({id:10})">Song</a></li>
-      <li><a ui-sref="list">list</a></li>
-    </ul>
-  </nav>
-<div ui-view></div>
+<div class="container">
+    <label for="searchArtists">Wyszukaj artystę:</label>
+    <input id="searchArtists" type="text" class="form-control" ng-model="ctrl.artists"/>
+    <button class="btn btn-default" ng-click="ctrl.search()">Szukaj</button>
+  <div ui-view></div>
 </div>

@@ -4,5 +4,6 @@ module.exports = {
   // pobranie pliku html jako template
   template: require('./main.template.html'),
   // inicjalizacja kontrolera
-  controller: require('./main.controller')
+  controller: require('./main.controller'),
+  controllerAs: 'ctrl'
 }

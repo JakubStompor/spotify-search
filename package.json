@@ -29,6 +29,7 @@
     "html-loader": "^0.4.4",
     "jquery": "^3.1.1",
     "style-loader": "^0.13.1",
+    "tipso": "^1.0.8",
     "webpack": "^1.14.0"
   }
 }
